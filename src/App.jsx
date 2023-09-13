@@ -3,6 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Note from "./Note";
 import CreateArea from "./CreateArea";
+import Auth from "./components/Auth"
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -24,6 +25,7 @@ function App() {
   return (
     <div>
       <Header />
+      <Auth />
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
         return (
